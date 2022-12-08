@@ -1,9 +1,20 @@
-Describe: Pizza()
+Describe: Pizza() _pass_
 Test: create a new pizza objects that stores toppings as an array, and size as a string
-Code: let newPizza = new Pizza(["olives", "sausage"], "large")
-Expected Output: Pizza {toppings: "olives", "sausage"], size: "large" }
+Code: let newPizza = new Pizza(["artichoke"], "large")
+Expected Output: Pizza {toppings: ["artichoke"], "large }
 
-Describe: Pizza.prototype.cost = function(pizza)
-  Test: outputs a price for the pizza based on toppings chosen
-  Code: newPizza.cost 
-  Expected Output: This pizza is $10
+
+Describe: Pizza.prototype.addToppings _pass_
+  Test: adds toppings to a pizza object 
+  Code: newPizza.addToppings("artichoke")
+3 Expected Output: 
+
+Describe: Order() _pass_
+Test: create a new order constructor that holds pizzas and total price a key value pairs. 
+Code: let newOrder = new Order (newPizza, 10)
+Expected Output = newOrder (pizzas: Array[1], totalPrice: 10)
+
+Describe: Order.prototype.addPizza() _pass_
+Test: create an addPizza method that pushes a new pizza to an order.
+Code: newOrder.addPizza(newPizza)
+Expected Output: newOrder {pizzas: Array(1), totalPrice: 0}
