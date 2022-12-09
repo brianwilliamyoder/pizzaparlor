@@ -1,3 +1,8 @@
+//Business Logic
+
+newOrder = new Order();
+
+
 function Order() {
   this.pizzas = [];
   this.totalCost = 0
@@ -17,8 +22,23 @@ Pizza.prototype.addToppings = function(type) {
   this.toppings.push(type)
 }
 
+//UI Logic
+
+function addPizzaToOrder(event) {
+  event.preventDefault();
+
+}
+
+function provideTotal() {
+
+}
 
 
+window.addEventListener("load", function (){
+  document.querySelector("form#orderpizza").addEventListener("submit", addPizzaToOrder);
+  document.querySelector(form#orderpizza).addEventListner("click", provideTotal);
+  
+})
 
 
  
