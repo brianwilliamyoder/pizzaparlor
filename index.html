@@ -3,7 +3,7 @@
 <head>
   <link href="css/styles.css" rel="stylsheet" type="text/css">
   <script src="js/scripts.js"></script>
-  <title>Yoder's Pizzeria</title>
+  <title>Classic Pizzeria</title>
 </head>
 <body>
   <h1>Welcome to Classic Pizza Shop!</h1>
@@ -58,11 +58,13 @@
         <option value="mushrooms">Mushrooms</option>
       </select>
       <button type="submit" id="place-another" name="place-another">Add pizza to order</button>
-      <button type="click" id="order-button" name="place-order">Place your order!</button>
     </form>
+    <button type="click" id="order-button" name="place-order">Place your order!</button>
   </div>
-
-  <div id="orderdetails" class="hidden">
+  <div>
+    <p id="ordertotal"></p>
+  </div>
+  <div id="orderdetails">
     <h2>Your order:</h2>
     <div id="yourpizzas">
       

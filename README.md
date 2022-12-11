@@ -1,20 +1,31 @@
-Describe: Pizza() _pass_
-Test: create a new pizza objects that stores toppings as an array, and size as a string
-Code: let newPizza = new Pizza(["artichoke"], "large")
-Expected Output: Pizza {toppings: ["artichoke"], "large }
+# _Classic Pizzeria_
+
+#### By _**Brian Yoder**_
+
+#### _A website where you can order as many pizzas as you'd like from from a classic pizzeria._
+
+## Technologies Used
+
+* MacBook Pro (13-inch, M1, 2020), macOS Monterey v. 12.6
+* VSCode v. 1.72.2
 
 
-Describe: Pizza.prototype.addToppings _pass_
-  Test: adds toppings to a pizza object 
-  Code: newPizza.addToppings("artichoke")
-3 Expected Output: 
+## Setup/Installation Requirements
 
-Describe: Order() _pass_
-Test: create a new order constructor that holds pizzas and total price a key value pairs. 
-Code: let newOrder = new Order (newPizza, 10)
-Expected Output = newOrder (pizzas: Array[1], totalPrice: 10)
+* Open Terminal/Command line
+* Navigate to the desktop by typing **cd ~/Desktop** and press Enter on the keybord
+* type **git clone https://github.com/brianwilliamyoder/pizza-parlor** into the terminal and press Enter on the keyboard
+* Navigate to the desktop and click on the "mr-roboger" folder.
+* Click on the "index.html" file (this should open the site in your preferred browser)
+* Enjoy the content!
 
-Describe: Order.prototype.addPizza() _pass_
-Test: create an addPizza method that pushes a new pizza to an order.
-Code: newOrder.addPizza(newPizza)
-Expected Output: newOrder {pizzas: Array(1), totalPrice: 0}
+
+## Known Bugs
+
+* No known bugs
+
+## [License](https://mit-license.org/)
+
+_If there are any issues found with the site, feel free to contact me at_ [brianyoder@gmail.com](brianyoder@gmail.com)
+
+Copyright (c) _2022_ _Brian Yoder_

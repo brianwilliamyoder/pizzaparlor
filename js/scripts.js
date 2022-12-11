@@ -12,14 +12,6 @@ Order.prototype.addPizza = function(pizza) {
 this.pizzas.push(pizza);
 }
 
-/*Order.prototype.determinePrice = function() {
-
-    for (let index = 0; index <= countTo; index += countBy) {
-      countArray.push(index);
-    }
-    return countArray;
-  } */
-
 function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
@@ -45,9 +37,11 @@ function addPizzaToOrder(event) {
   let i = newOrder.counter;
   let toppings = newOrder.pizzas[i].toppings;
   let divsize = newOrder.pizzas[i].size;
-  p.innerText = divsize + " with " + toppings.join(", ") ;
+  p.innerText = divsize + " with " + toppings.join(",  ") + " $" + newOrder.pizzas[i].price;
   orderDiv.append(p);
+  provideTotal();
   newOrder.counter +=1;
+  
 }
 
 function determinePrice() {
@@ -61,7 +55,7 @@ function determinePrice() {
    else {
     newOrder.pizzas[i] += 15;
    }
-   //newOrder.pizzas[i].price += newOrder.pizzas[i].toppings.length;
+   
    let toppingsArray = newOrder.pizzas[i].toppings;
    toppingsArray.forEach(function(topping) {
     if (topping === "none") {
@@ -72,7 +66,13 @@ function determinePrice() {
   })
 }
 
+function provideTotal() {
+  let p = document.getElementById("ordertotal");
+  let i = newOrder.counter;
+  newOrder.totalCost += newOrder.pizzas[i].price;
+  p.innerText = "Your total cost is $" + newOrder.totalCost;
+}
+
 window.addEventListener("load", function (){
   document.querySelector("form#orderpizza").addEventListener("submit", addPizzaToOrder);
- // document.querySelector("form#orderpizza").addEventListener("click", provideTotal);
 })
