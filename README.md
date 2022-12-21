@@ -22,7 +22,7 @@
 
 ## Known Bugs
 
-* No known bugs
+* Background image moves when pizzas are added to order, and when order is finalized. 
 
 ## [License](https://mit-license.org/)
 
