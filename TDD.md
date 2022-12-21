@@ -13,3 +13,12 @@ Describe: Order.prototype.addPizza() _pass_
 Test: create an addPizza method that pushes a new pizza to an order.
 Code: newOrder.addPizza(newPizza)
 Expected Output: newOrder {pizzas: Array(1), totalPrice: 0}
+
+Describe: function determinePrice() _pass_
+Test: tabulate price based on number of toppings and size
+Code: Pizza {
+        toppings: ["pepperoni", "spinach"],
+        size: "medium"
+      };
+ determinePrice()
+Expected Output: $14
