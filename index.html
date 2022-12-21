@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylsheet" type="text/css">
   <script src="js/scripts.js"></script>
   <title>Classic Pizzeria</title>
@@ -8,7 +9,7 @@
 <body>
   <h1>Welcome to Classic Pizza Shop!</h1>
   <h2>Build a pizza below!</h2>
-  <div id="orderdiv"></div>
+  <div id="orderdiv">
     <form id="orderpizza">
       <h2>Select your size</h2>
       <select id="pizza-size">
@@ -17,50 +18,24 @@
         <option value="large">Large</option>
       </select>
       <h2>Please select your toppings:</h2>
-      <select id="topping-1" name="topping">
-        <option value="none" selected>None</option>
-        <option value="pepperoni">Pepperoni</option>
-        <option value="anchovies">Anchovies</option>
-        <option value="garlic">Garlic</option>
-        <option value="sausage">Sausage</option>
-        <option value="mushrooms">Mushrooms</option>
-      </select>
-      <select id="topping-2" name="topping">
-        <option value="none" selected>None</option>
-        <option value="pepperoni">Pepperoni</option>
-        <option value="anchovies">Anchovies</option>
-        <option value="garlic">Garlic</option>
-        <option value="sausage">Sausage</option>
-        <option value="mushrooms">Mushrooms</option>
-      </select>
-      <select id="topping-3" name="topping">
-        <option value="none" selected>None</option>
-        <option value="pepperoni">Pepperoni</option>
-        <option value="anchovies">Anchovies</option>
-        <option value="garlic">Garlic</option>
-        <option value="sausage">Sausage</option>
-        <option value="mushrooms">Mushrooms</option>
-      </select>
-      <select id="topping-4" name="topping">
-        <option value="none" selected>None</option>
-        <option value="pepperoni">Pepperoni</option>
-        <option value="anchovies">Anchovies</option>
-        <option value="garlic">Garlic</option>
-        <option value="sausage">Sausage</option>
-        <option value="mushrooms">Mushrooms</option>
-      </select>
-      <select id="topping-5" name="topping">
-        <option value="none" selected>None</option>
-        <option value="pepperoni">Pepperoni</option>
-        <option value="anchovies">Anchovies</option>
-        <option value="garlic">Garlic</option>
-        <option value="sausage">Sausage</option>
-        <option value="mushrooms">Mushrooms</option>
-      </select>
+      <input type="checkbox" class="topping" id="pepperoni" name="pepperoni" value="pepperoni">
+      <label for="pepperoni">Pepperoni</label><br>
+      <input type="checkbox" class="topping" id="anchovies" name="anchovies" value="anchovies">
+      <label for="anchovies">Anchovies</label><br>
+      <input type="checkbox" class="topping" id="mushrooms" name="mushrooms" value="mushrooms">
+      <label for="mushrooms">Mushrooms</label><br>
+      <input type="checkbox" class="topping" id="olives" name="olives" value="olives">
+      <label for="olives">Olives</label><br>
+      <input type="checkbox" class="topping"  id="spinach" name="spinach" value="spinach">
+      <label for="spinach">Spinach</label><br>
       <button type="submit" id="place-another" name="place-another">Add pizza to order</button>
     </form>
-    <button type="click" id="order-button" name="place-order">Place your order!</button>
+    <div id="finish-order">
+      <button type="submit" id="finish-order" name="finish-order">Place your order!</button>
+    </div>
   </div>
+  <br>
+  <br>
   <div>
     <p id="ordertotal"></p>
   </div>
